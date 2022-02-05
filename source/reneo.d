@@ -591,10 +591,11 @@ bool handleKeyEvent(Scancode scan, bool down) nothrow {
                 sendVK(VK_CAPITAL, scanCapslock, false);
             }
 
-            if (mod == Modifier.LMOD4 && !isModifierHeld(Modifier.LMOD4) && isModifierHeld(Modifier.RMOD4) ||
-                mod == Modifier.RMOD4 && !isModifierHeld(Modifier.RMOD4) && isModifierHeld(Modifier.LMOD4)) {
-                mod4Lock = !mod4Lock;
-            }
+						// mod4Lock always false
+            //if (mod == Modifier.LMOD4 && !isModifierHeld(Modifier.LMOD4) && isModifierHeld(Modifier.RMOD4) ||
+            //    mod == Modifier.RMOD4 && !isModifierHeld(Modifier.RMOD4) && isModifierHeld(Modifier.LMOD4)) {
+            //    mod4Lock = !mod4Lock;
+            //}
         }
 
         if (!(mod in naturalHeldModifiers)) {
